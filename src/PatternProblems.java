@@ -1,10 +1,109 @@
 public class PatternProblems {
 
     public static void main(String[] args) {
+        hallowPattern7(5);
         numPattern1(5);
         wordPattern1("Hello");
         charPattern1(5);
         starPattern1(5);
+    }
+
+
+    static void hallowPattern7(int n) {
+        for (int row = 0; row < 2 * n; row++) {
+            int loopCol = row > n ? 2 * n - row : row;
+            int noOfSpaces = n - loopCol;
+            for (int col = 0; col < noOfSpaces; col++) {
+                System.out.print(" ");
+            }
+            for (int col = 1; col <= loopCol; col++) {
+                if (col == 1 || col == row || col==loopCol) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void hallowPattern6(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (col == 1 || row == 1 || row + col == n + 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void hallowPattern5(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (col == 1 || row == col || row == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void hallowPattern4(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (col == 1 || col == n || row == 1 || row == n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+    static void hallowPattern3(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (row == col || col + row == n + 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void hallowPattern2(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (row == n / 2 + 1 || col == n / 2 + 1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void hallowPattern1(int n) {
+        for (int row = 1; row < n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (col == 1 || col == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     static void numPattern4(int n) {
